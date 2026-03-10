@@ -92,7 +92,7 @@ const Index = () => {
                 </div>
               )}
             </div>
-        </div>
+          </div>
       </nav>
 
       {/* Hero */}
