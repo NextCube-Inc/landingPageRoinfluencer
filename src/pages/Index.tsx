@@ -58,10 +58,40 @@ const Index = () => {
             <a href="#solucao" className="font-body text-sm text-muted-foreground hover:text-foreground transition-colors">Solução</a>
             <a href="#funcionalidades" className="font-body text-sm text-muted-foreground hover:text-foreground transition-colors">Funcionalidades</a>
             <a href="#planos" className="font-body text-sm text-muted-foreground hover:text-foreground transition-colors">Planos</a>
-            <a href="#contato" className="bg-primary text-primary-foreground px-5 py-2 rounded-lg font-body text-sm font-medium hover:opacity-90 transition-opacity">
-              Começar Agora
-            </a>
-          </div>
+            <div className="relative" ref={dropdownRef}>
+              <button
+                onClick={() => setDropdownOpen(!dropdownOpen)}
+                className="bg-primary text-primary-foreground px-5 py-2 rounded-lg font-body text-sm font-medium hover:opacity-90 transition-opacity flex items-center gap-1.5"
+              >
+                Acessar <ChevronDown className={`w-4 h-4 transition-transform ${dropdownOpen ? "rotate-180" : ""}`} />
+              </button>
+              {dropdownOpen && (
+                <div className="absolute right-0 mt-2 w-56 glass rounded-xl border border-border shadow-lg overflow-hidden animate-in fade-in slide-in-from-top-2 duration-200">
+                  <a
+                    href="#"
+                    className="flex items-center gap-3 px-4 py-3 font-body text-sm text-foreground hover:bg-muted/50 transition-colors"
+                    onClick={() => setDropdownOpen(false)}
+                  >
+                    <Building2 className="w-4 h-4 text-primary" />
+                    <div>
+                      <span className="font-medium">Sou Empresa</span>
+                      <p className="text-xs text-muted-foreground">Acessar painel business</p>
+                    </div>
+                  </a>
+                  <a
+                    href="#"
+                    className="flex items-center gap-3 px-4 py-3 font-body text-sm text-foreground hover:bg-muted/50 transition-colors border-t border-border"
+                    onClick={() => setDropdownOpen(false)}
+                  >
+                    <Smartphone className="w-4 h-4 text-primary" />
+                    <div>
+                      <span className="font-medium">Sou Influenciador</span>
+                      <p className="text-xs text-muted-foreground">Baixar o app</p>
+                    </div>
+                  </a>
+                </div>
+              )}
+            </div>
         </div>
       </nav>
 
