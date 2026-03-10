@@ -8,12 +8,9 @@ import {
   Bell,
   MessageSquare,
   TrendingUp,
-  Smartphone,
   Users,
   Eye,
   ShieldCheck,
-  ChevronDown,
-  Building2,
   Zap,
   Target,
   ChevronRight,
@@ -22,11 +19,7 @@ import {
   Building2,
   Smartphone,
 } from "lucide-react";
-<<<<<<< HEAD
 import { useEffect, useRef, useState } from "react";
-=======
-import { useState, useRef, useEffect } from "react";
->>>>>>> ee881db1b545cf3b5289cd9e7f7045cc4f0c21fb
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
