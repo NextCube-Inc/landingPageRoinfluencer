@@ -13,7 +13,11 @@ import {
   Target,
   ChevronRight,
   CheckCircle2,
+  ChevronDown,
+  Building2,
+  Smartphone,
 } from "lucide-react";
+import { useState, useRef, useEffect } from "react";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
