@@ -1,19 +1,25 @@
 import { motion } from "framer-motion";
 import heroBg from "@/assets/hero-bg.jpg";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/V1 (Roxo)@2x.png";
+import icaro from "@/assets/icaro.webp"
+import next from "@/assets/NextCubeInc.png"
 import {
   BarChart3,
   Bell,
   MessageSquare,
   TrendingUp,
+  Smartphone,
   Users,
   Eye,
   ShieldCheck,
+  ChevronDown,
+  Building2,
   Zap,
   Target,
   ChevronRight,
   CheckCircle2,
 } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -25,6 +31,19 @@ const stagger = {
 };
 
 const Index = () => {
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+        setDropdownOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
   return (
     <div className="min-h-screen bg-background overflow-x-hidden">
       {/* Navbar */}
@@ -41,9 +60,40 @@ const Index = () => {
             <a href="#solucao" className="font-body text-sm text-muted-foreground hover:text-foreground transition-colors">Solução</a>
             <a href="#funcionalidades" className="font-body text-sm text-muted-foreground hover:text-foreground transition-colors">Funcionalidades</a>
             <a href="#planos" className="font-body text-sm text-muted-foreground hover:text-foreground transition-colors">Planos</a>
-            <a href="#contato" className="bg-primary text-primary-foreground px-5 py-2 rounded-lg font-body text-sm font-medium hover:opacity-90 transition-opacity">
-              Começar Agora
-            </a>
+            <div className="relative" ref={dropdownRef}>
+              <button
+                onClick={() => setDropdownOpen(!dropdownOpen)}
+                className="bg-primary text-primary-foreground px-5 py-2 rounded-lg font-body text-sm font-medium hover:opacity-90 transition-opacity flex items-center gap-1.5"
+              >
+                Acessar <ChevronDown className={`w-4 h-4 transition-transform ${dropdownOpen ? "rotate-180" : ""}`} />
+              </button>
+              {dropdownOpen && (
+                <div className="absolute right-0 mt-2 w-56 glass rounded-xl border border-border shadow-lg overflow-hidden animate-in fade-in slide-in-from-top-2 duration-200">
+                  <a
+                    href="#"
+                    className="flex items-center gap-3 px-4 py-3 font-body text-sm text-foreground hover:bg-muted/50 transition-colors"
+                    onClick={() => setDropdownOpen(false)}
+                  >
+                    <Building2 className="w-4 h-4 text-primary" />
+                    <div>
+                      <span className="font-medium">Sou Empresa</span>
+                      <p className="text-xs text-muted-foreground">Acessar painel business</p>
+                    </div>
+                  </a>
+                  <a
+                    href="#"
+                    className="flex items-center gap-3 px-4 py-3 font-body text-sm text-foreground hover:bg-muted/50 transition-colors border-t border-border"
+                    onClick={() => setDropdownOpen(false)}
+                  >
+                    <Smartphone className="w-4 h-4 text-primary" />
+                    <div>
+                      <span className="font-medium">Sou Influenciador</span>
+                      <p className="text-xs text-muted-foreground">Baixar o app</p>
+                    </div>
+                  </a>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </nav>
@@ -216,7 +266,7 @@ const Index = () => {
               <ul className="space-y-3 flex-1">
                 {["300 vendas/mês", "30 influenciadores", "Painel de vendas individual"].map((f) => (
                   <li key={f} className="flex items-start gap-2 font-body text-sm text-muted-foreground">
-                    <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" /> {f}
+                    <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" color="#FFF"/> {f}
                   </li>
                 ))}
               </ul>
@@ -247,18 +297,18 @@ const Index = () => {
 
             {/* Elite */}
             <motion.div variants={fadeUp} className="glass rounded-2xl p-8 flex flex-col">
-              <h3 className="font-heading text-xl font-bold text-foreground">ROI Elite</h3>
+              <h3 className="font-heading text-xl font-bold text-foreground text-[#CD9000]">ROI Elite</h3>
               <div className="mt-4 mb-6">
                 <span className="font-heading text-2xl font-bold text-foreground">Sob consulta</span>
               </div>
               <ul className="space-y-3 flex-1">
                 {["Tudo do Pro", "Benefícios exclusivos", "Suporte prioritário", "Personalização completa"].map((f) => (
                   <li key={f} className="flex items-start gap-2 font-body text-sm text-muted-foreground">
-                    <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" /> {f}
+                    <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" color="#CD9000"/> {f}
                   </li>
                 ))}
               </ul>
-              <a href="#contato" className="mt-8 block text-center glow-border rounded-lg py-3 font-heading font-medium text-foreground hover:bg-muted transition-colors">
+              <a href="#contato" className="mt-8 block text-center glow-border rounded-lg py-3 font-heading font-medium text-foreground hover:bg-muted transition-colors ">
                 Falar com Atendente
               </a>
             </motion.div>
@@ -276,15 +326,16 @@ const Index = () => {
             </motion.h2>
           </motion.div>
 
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {[
-              { name: "Ícaro Lermen", role: "Co-fundador", desc: "Fundador do Team Icaro, influenciador e especialista em performance." },
-              { name: "Mateus Cierro", role: "Co-fundador", desc: "Empreendedor, fundador da Olway, gestor de grandes equipes de influenciadores." },
-              { name: "Caio", role: "Co-fundador", desc: "Estrategista digital e idealizador técnico do software ROInfluencer." },
+              { name: "Ícaro Lermen", role: "Co-fundador", desc: "Fundador do Team Icaro, influenciador e especialista em performance.", img: icaro},
+              { name: "Mateus Cierro", role: "Co-fundador", desc: "Empreendedor, fundador da Olway, gestor de grandes equipes de influenciadores.", img: "/src/assets/add-a-heading-70-0f0677d3ce9b89780b17508777082116-1024-1024.webp"},
+              //{ name: "NextCubeInc", role: "Developer", desc: "Developer da RoInfluencer", img: next},
             ].map((member) => (
               <motion.div key={member.name} variants={fadeUp} className="glass rounded-2xl p-8 text-center">
                 <div className="w-20 h-20 rounded-full bg-primary/10 mx-auto mb-5 flex items-center justify-center">
-                  <span className="font-heading text-2xl font-bold text-primary">{member.name[0]}</span>
+                  <img src={member.img} alt="" className="h-full w-full rounded-full object-cover"/>
+                  {/*<span className="font-heading text-2xl font-bold text-primary">{member.name[0]}</span>*/}
                 </div>
                 <h3 className="font-heading text-lg font-semibold text-foreground">{member.name}</h3>
                 <p className="font-body text-sm text-primary mt-1">{member.role}</p>
