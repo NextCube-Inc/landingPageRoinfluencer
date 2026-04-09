@@ -132,7 +132,7 @@ const Index = () => {
       </section>
 
       {/* Problema */}
-      <section id="problema" className="py-24 section-glow bg-muted/30">
+      <section id="problema" className="min-h-screen flex items-center py-24 section-glow bg-muted/30">
         <div className="container mx-auto px-6 relative z-10">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="text-center mb-16">
             <motion.span variants={fadeUp} className="font-body text-sm text-primary uppercase tracking-widest">O Problema</motion.span>
@@ -186,7 +186,7 @@ const Index = () => {
       </section>
 
       {/* Solução */}
-      <section id="solucao" className="py-24 bg-muted/20">
+      <section id="solucao" className="min-h-screen flex items-center py-24 bg-muted/20">
         <div className="container mx-auto px-6">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="text-center mb-16">
             <motion.span variants={fadeUp} className="font-body text-sm text-primary uppercase tracking-widest">A Solução</motion.span>
@@ -218,7 +218,7 @@ const Index = () => {
       </section>
 
       {/* Funcionalidades / Escalabilidade */}
-      <section id="funcionalidades" className="py-24 section-glow">
+      <section id="funcionalidades" className="min-h-screen flex items-center py-24 section-glow">
         <div className="container mx-auto px-6 relative z-10">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="max-w-4xl mx-auto text-center">
             <motion.span variants={fadeUp} className="font-body text-sm text-primary uppercase tracking-widest">Escalabilidade Real</motion.span>
@@ -246,7 +246,7 @@ const Index = () => {
       </section>
 
       {/* Planos */}
-      <section id="planos" className="py-24">
+      <section id="planos" className="min-h-screen flex items-center py-24">
         <div className="container mx-auto px-6">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="text-center mb-16">
             <motion.span variants={fadeUp} className="font-body text-sm text-primary uppercase tracking-widest">Planos</motion.span>
@@ -317,7 +317,7 @@ const Index = () => {
       </section>
 
       {/* Time */}
-      <section className="py-24 section-glow">
+      <section className="min-h-screen flex items-center py-24 section-glow">
         <div className="container mx-auto px-6 relative z-10">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="text-center mb-16">
             <motion.span variants={fadeUp} className="font-body text-sm text-primary uppercase tracking-widest">O Time</motion.span>
@@ -347,7 +347,7 @@ const Index = () => {
       </section>
 
       {/* CTA */}
-      <section id="contato" className="py-24">
+      <section id="contato" className="min-h-screen flex items-center py-24">
         <div className="container mx-auto px-6">
           <motion.div
             initial="hidden"
