@@ -70,7 +70,7 @@ const Index = () => {
               {dropdownOpen && (
                 <div className="absolute right-0 mt-2 w-56 glass rounded-xl border border-border shadow-lg overflow-hidden animate-in fade-in slide-in-from-top-2 duration-200">
                   <a
-                    href="#"
+                    href="https://business.roinfluencer.com"
                     className="flex items-center gap-3 px-4 py-3 font-body text-sm text-foreground hover:bg-muted/50 transition-colors"
                     onClick={() => setDropdownOpen(false)}
                   >
@@ -110,9 +110,9 @@ const Index = () => {
           animate="visible"
           variants={stagger}
         >
-          <motion.div variants={fadeUp} className="inline-block mb-6 px-4 py-1.5 rounded-full glow-border glass">
+          {/* <motion.div variants={fadeUp} className="inline-block mb-6 px-4 py-1.5 rounded-full glow-border glass">
             <span className="font-body text-sm text-primary">v0.1 — Plataforma de ROI para Influenciadores</span>
-          </motion.div>
+          </motion.div> */}
           <motion.h1 variants={fadeUp} className="font-heading text-5xl md:text-7xl lg:text-8xl font-bold leading-tight mb-6">
             Transforme influência<br />
             em <span className="text-gradient">ROI real</span>
