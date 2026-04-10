@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import heroBg from "@/assets/hero-bg.jpg";
 import logo from "@/assets/V1 (Roxo)@2x.png";
 import icaro from "@/assets/icaro.webp"
+import cierro from "@/assets/IMG 8316.jpg"
 import next from "@/assets/NextCubeInc.png"
 import {
   BarChart3,
@@ -186,7 +187,7 @@ const Index = () => {
       </section>
 
       {/* Solução */}
-      <section id="solucao" className="min-h-screen flex items-center py-24 bg-muted/20">
+      <section id="solucao" className="min-h-screen flex items-center py-24 bg-gray-800">
         <div className="container mx-auto px-6">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="text-center mb-16">
             <motion.span variants={fadeUp} className="font-body text-sm text-primary uppercase tracking-widest">A Solução</motion.span>
@@ -246,7 +247,7 @@ const Index = () => {
       </section>
 
       {/* Planos */}
-      <section id="planos" className="min-h-screen flex items-center py-24">
+      <section id="planos" className="min-h-screen flex items-center py-24 bg-purple-900">
         <div className="container mx-auto px-6">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="text-center mb-16">
             <motion.span variants={fadeUp} className="font-body text-sm text-primary uppercase tracking-widest">Planos</motion.span>
@@ -329,7 +330,7 @@ const Index = () => {
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {[
               { name: "Ícaro Lermen", role: "Co-fundador", desc: "Fundador do Team Icaro, influenciador e especialista em performance.", img: icaro},
-              { name: "Mateus Cierro", role: "Co-fundador", desc: "Empreendedor, fundador da Olway, gestor de grandes equipes de influenciadores.", img: "/src/assets/add-a-heading-70-0f0677d3ce9b89780b17508777082116-1024-1024.webp"},
+              { name: "Mateus Cierro", role: "Co-fundador", desc: "Empreendedor, fundador da Olway, gestor de grandes equipes de influenciadores.", img: cierro},
               //{ name: "NextCubeInc", role: "Developer", desc: "Developer da RoInfluencer", img: next},
             ].map((member) => (
               <motion.div key={member.name} variants={fadeUp} className="glass rounded-2xl p-8 text-center">
