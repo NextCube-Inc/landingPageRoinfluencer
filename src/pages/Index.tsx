@@ -258,35 +258,35 @@ const Index = () => {
 
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {/* Basic */}
-            <motion.div variants={fadeUp} className="glass rounded-2xl p-8 flex flex-col">
-              <h3 className="font-heading text-xl font-bold text-foreground">Basic</h3>
+            <motion.div variants={fadeUp} className="rounded-2xl p-8 flex flex-col bg-white/70 backdrop-blur-sm border border-black/5 shadow-sm">
+              <h3 className="font-heading text-xl font-bold text-background">Basic</h3>
               <div className="mt-4 mb-6">
-                <span className="font-heading text-4xl font-bold text-foreground">R$497</span>
-                <span className="font-body text-sm text-muted-foreground">/mês</span>
+                <span className="font-heading text-4xl font-bold text-background">R$497</span>
+                <span className="font-body text-sm text-background/60">/mês</span>
               </div>
               <ul className="space-y-3 flex-1">
                 {["300 vendas/mês", "30 influenciadores", "Painel de vendas individual"].map((f) => (
-                  <li key={f} className="flex items-start gap-2 font-body text-sm text-muted-foreground">
-                    <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" color="#FFF"/> {f}
+                  <li key={f} className="flex items-start gap-2 font-body text-sm text-background/70">
+                    <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0"/> {f}
                   </li>
                 ))}
               </ul>
-              <a href="#contato" className="mt-8 block text-center glow-border rounded-lg py-3 font-heading font-medium text-foreground hover:bg-muted transition-colors">
+              <a href="#contato" className="mt-8 block text-center border border-primary/30 rounded-lg py-3 font-heading font-medium text-background hover:bg-primary/10 transition-colors">
                 Começar
               </a>
             </motion.div>
 
             {/* ROI Pro */}
-            <motion.div variants={fadeUp} className="rounded-2xl p-8 flex flex-col glow-box border border-primary/30 bg-card relative overflow-hidden">
+            <motion.div variants={fadeUp} className="rounded-2xl p-8 flex flex-col shadow-lg border-2 border-primary/30 bg-white relative overflow-hidden">
               <div className="absolute top-0 right-0 bg-primary text-primary-foreground text-xs font-heading font-bold px-3 py-1 rounded-bl-lg">POPULAR</div>
-              <h3 className="font-heading text-xl font-bold text-foreground">ROI Pro</h3>
+              <h3 className="font-heading text-xl font-bold text-background">ROI Pro</h3>
               <div className="mt-4 mb-6">
                 <span className="font-heading text-4xl font-bold text-gradient">R$1.870</span>
-                <span className="font-body text-sm text-muted-foreground">/mês</span>
+                <span className="font-body text-sm text-background/60">/mês</span>
               </div>
               <ul className="space-y-3 flex-1">
                 {["1.500 vendas/mês", "100 influenciadores", "Notificações Push", "2 disparos personalizados/mês", "Painel completo"].map((f) => (
-                  <li key={f} className="flex items-start gap-2 font-body text-sm text-muted-foreground">
+                  <li key={f} className="flex items-start gap-2 font-body text-sm text-background/70">
                     <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" /> {f}
                   </li>
                 ))}
@@ -297,19 +297,19 @@ const Index = () => {
             </motion.div>
 
             {/* Elite */}
-            <motion.div variants={fadeUp} className="glass rounded-2xl p-8 flex flex-col">
-              <h3 className="font-heading text-xl font-bold text-foreground text-[#CD9000]">ROI Elite</h3>
+            <motion.div variants={fadeUp} className="rounded-2xl p-8 flex flex-col bg-white/70 backdrop-blur-sm border border-black/5 shadow-sm">
+              <h3 className="font-heading text-xl font-bold text-[#CD9000]">ROI Elite</h3>
               <div className="mt-4 mb-6">
-                <span className="font-heading text-2xl font-bold text-foreground">Sob consulta</span>
+                <span className="font-heading text-2xl font-bold text-background">Sob consulta</span>
               </div>
               <ul className="space-y-3 flex-1">
                 {["Tudo do Pro", "Benefícios exclusivos", "Suporte prioritário", "Personalização completa"].map((f) => (
-                  <li key={f} className="flex items-start gap-2 font-body text-sm text-muted-foreground">
-                    <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" color="#CD9000"/> {f}
+                  <li key={f} className="flex items-start gap-2 font-body text-sm text-background/70">
+                    <CheckCircle2 className="w-4 h-4 text-[#CD9000] mt-0.5 flex-shrink-0"/> {f}
                   </li>
                 ))}
               </ul>
-              <a href="#contato" className="mt-8 block text-center glow-border rounded-lg py-3 font-heading font-medium text-foreground hover:bg-muted transition-colors ">
+              <a href="#contato" className="mt-8 block text-center border border-primary/30 rounded-lg py-3 font-heading font-medium text-background hover:bg-primary/10 transition-colors">
                 Falar com Atendente
               </a>
             </motion.div>
