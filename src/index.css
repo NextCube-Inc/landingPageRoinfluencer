@@ -39,6 +39,9 @@
     --glow-primary: 300 76% 52%;
     --glow-secondary: 270 60% 40%;
 
+    --section-light: 0 0% 95%;
+    --section-light-alt: 0 0% 90%;
+
     --sidebar-background: 0 0% 6%;
     --sidebar-foreground: 0 0% 95%;
     --sidebar-primary: 300 76% 52%;

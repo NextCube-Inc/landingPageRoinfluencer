@@ -133,11 +133,11 @@ const Index = () => {
       </section>
 
       {/* Problema */}
-      <section id="problema" className="min-h-screen flex items-center py-24 section-glow bg-secondary/40">
+      <section id="problema" className="min-h-screen flex items-center py-24 section-glow" style={{ background: 'hsl(0 0% 95%)' }}>
         <div className="container mx-auto px-6 relative z-10">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="text-center mb-16">
             <motion.span variants={fadeUp} className="font-body text-sm text-primary uppercase tracking-widest">O Problema</motion.span>
-            <motion.h2 variants={fadeUp} className="font-heading text-4xl md:text-5xl font-bold mt-4">
+            <motion.h2 variants={fadeUp} className="font-heading text-4xl md:text-5xl font-bold mt-4 text-background">
               Dores que travam o crescimento
             </motion.h2>
           </motion.div>
@@ -151,13 +151,13 @@ const Index = () => {
                 { icon: Target, title: "Conversão", desc: "Dificuldade em identificar postagens que convertem mais." },
                 { icon: ShieldCheck, title: "Transparência", desc: "Falta de acesso aos números reais de conversão." },
               ].map((item) => (
-                <motion.div key={item.title} variants={fadeUp} className="flex gap-4 mb-6 glass rounded-xl p-5">
+                <motion.div key={item.title} variants={fadeUp} className="flex gap-4 mb-6 rounded-xl p-5 bg-white/70 backdrop-blur-sm border border-black/5 shadow-sm">
                   <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
                     <item.icon className="w-5 h-5 text-primary" />
                   </div>
                   <div>
-                    <h4 className="font-heading font-semibold text-foreground">{item.title}</h4>
-                    <p className="font-body text-sm text-muted-foreground mt-1">{item.desc}</p>
+                    <h4 className="font-heading font-semibold text-background">{item.title}</h4>
+                    <p className="font-body text-sm text-background/60 mt-1">{item.desc}</p>
                   </div>
                 </motion.div>
               ))}
@@ -171,13 +171,13 @@ const Index = () => {
                 { icon: TrendingUp, title: "Clareza no ROI", desc: "Falta de clareza no ROI por influenciador." },
                 { icon: Zap, title: "Previsibilidade", desc: "Falta de previsibilidade e dificuldade para escalar." },
               ].map((item) => (
-                <motion.div key={item.title} variants={fadeUp} className="flex gap-4 mb-6 glass rounded-xl p-5">
+                <motion.div key={item.title} variants={fadeUp} className="flex gap-4 mb-6 rounded-xl p-5 bg-white/70 backdrop-blur-sm border border-black/5 shadow-sm">
                   <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
                     <item.icon className="w-5 h-5 text-primary" />
                   </div>
                   <div>
-                    <h4 className="font-heading font-semibold text-foreground">{item.title}</h4>
-                    <p className="font-body text-sm text-muted-foreground mt-1">{item.desc}</p>
+                    <h4 className="font-heading font-semibold text-background">{item.title}</h4>
+                    <p className="font-body text-sm text-background/60 mt-1">{item.desc}</p>
                   </div>
                 </motion.div>
               ))}
@@ -187,14 +187,14 @@ const Index = () => {
       </section>
 
       {/* Solução */}
-      <section id="solucao" className="min-h-screen flex items-center py-24 bg-muted/40">
+      <section id="solucao" className="min-h-screen flex items-center py-24" style={{ background: 'hsl(0 0% 90%)' }}>
         <div className="container mx-auto px-6">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="text-center mb-16">
             <motion.span variants={fadeUp} className="font-body text-sm text-primary uppercase tracking-widest">A Solução</motion.span>
-            <motion.h2 variants={fadeUp} className="font-heading text-4xl md:text-5xl font-bold mt-4">
+            <motion.h2 variants={fadeUp} className="font-heading text-4xl md:text-5xl font-bold mt-4 text-background">
               Nossa entrega muda o jogo
             </motion.h2>
-            <motion.p variants={fadeUp} className="font-body text-lg text-muted-foreground mt-4 max-w-2xl mx-auto">
+            <motion.p variants={fadeUp} className="font-body text-lg text-background/60 mt-4 max-w-2xl mx-auto">
               Uma plataforma capaz de escalar ROI para empresas e influenciadores simultaneamente, criando um ecossistema onde ambos ganham mais.
             </motion.p>
           </motion.div>
@@ -206,12 +206,12 @@ const Index = () => {
               { icon: MessageSquare, title: "Central de Comunicação", desc: "Canal direto entre marca e influenciador para campanhas, briefings e materiais." },
               { icon: TrendingUp, title: "Métricas Detalhadas", desc: "Relatórios completos com foco em ROI, ticket médio, vendas por ação e evolução." },
             ].map((item) => (
-              <motion.div key={item.title} variants={fadeUp} className="glass rounded-2xl p-6 hover:glow-box transition-shadow duration-500 group">
+              <motion.div key={item.title} variants={fadeUp} className="rounded-2xl p-6 bg-white/70 backdrop-blur-sm border border-black/5 shadow-sm hover:shadow-lg transition-shadow duration-500 group">
                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
                   <item.icon className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="font-heading text-lg font-semibold text-foreground mb-2">{item.title}</h3>
-                <p className="font-body text-sm text-muted-foreground">{item.desc}</p>
+                <h3 className="font-heading text-lg font-semibold text-background mb-2">{item.title}</h3>
+                <p className="font-body text-sm text-background/60">{item.desc}</p>
               </motion.div>
             ))}
           </motion.div>
@@ -219,7 +219,7 @@ const Index = () => {
       </section>
 
       {/* Funcionalidades / Escalabilidade */}
-      <section id="funcionalidades" className="min-h-screen flex items-center py-24 section-glow">
+      <section id="funcionalidades" className="min-h-screen flex items-center py-32 section-glow">
         <div className="container mx-auto px-6 relative z-10">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="max-w-4xl mx-auto text-center">
             <motion.span variants={fadeUp} className="font-body text-sm text-primary uppercase tracking-widest">Escalabilidade Real</motion.span>
@@ -247,46 +247,46 @@ const Index = () => {
       </section>
 
       {/* Planos */}
-      <section id="planos" className="min-h-screen flex items-center py-24 bg-secondary/30">
+      <section id="planos" className="min-h-screen flex items-center py-24" style={{ background: 'hsl(0 0% 95%)' }}>
         <div className="container mx-auto px-6">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="text-center mb-16">
             <motion.span variants={fadeUp} className="font-body text-sm text-primary uppercase tracking-widest">Planos</motion.span>
-            <motion.h2 variants={fadeUp} className="font-heading text-4xl md:text-5xl font-bold mt-4">
+            <motion.h2 variants={fadeUp} className="font-heading text-4xl md:text-5xl font-bold mt-4 text-background">
               Escolha o plano ideal
             </motion.h2>
           </motion.div>
 
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {/* Basic */}
-            <motion.div variants={fadeUp} className="glass rounded-2xl p-8 flex flex-col">
-              <h3 className="font-heading text-xl font-bold text-foreground">Basic</h3>
+            <motion.div variants={fadeUp} className="rounded-2xl p-8 flex flex-col bg-white/70 backdrop-blur-sm border border-black/5 shadow-sm">
+              <h3 className="font-heading text-xl font-bold text-background">Basic</h3>
               <div className="mt-4 mb-6">
-                <span className="font-heading text-4xl font-bold text-foreground">R$497</span>
-                <span className="font-body text-sm text-muted-foreground">/mês</span>
+                <span className="font-heading text-4xl font-bold text-background">R$497</span>
+                <span className="font-body text-sm text-background/60">/mês</span>
               </div>
               <ul className="space-y-3 flex-1">
                 {["300 vendas/mês", "30 influenciadores", "Painel de vendas individual"].map((f) => (
-                  <li key={f} className="flex items-start gap-2 font-body text-sm text-muted-foreground">
-                    <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" color="#FFF"/> {f}
+                  <li key={f} className="flex items-start gap-2 font-body text-sm text-background/70">
+                    <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0"/> {f}
                   </li>
                 ))}
               </ul>
-              <a href="#contato" className="mt-8 block text-center glow-border rounded-lg py-3 font-heading font-medium text-foreground hover:bg-muted transition-colors">
+              <a href="#contato" className="mt-8 block text-center border border-primary/30 rounded-lg py-3 font-heading font-medium text-background hover:bg-primary/10 transition-colors">
                 Começar
               </a>
             </motion.div>
 
             {/* ROI Pro */}
-            <motion.div variants={fadeUp} className="rounded-2xl p-8 flex flex-col glow-box border border-primary/30 bg-card relative overflow-hidden">
+            <motion.div variants={fadeUp} className="rounded-2xl p-8 flex flex-col shadow-lg border-2 border-primary/30 bg-white relative overflow-hidden">
               <div className="absolute top-0 right-0 bg-primary text-primary-foreground text-xs font-heading font-bold px-3 py-1 rounded-bl-lg">POPULAR</div>
-              <h3 className="font-heading text-xl font-bold text-foreground">ROI Pro</h3>
+              <h3 className="font-heading text-xl font-bold text-background">ROI Pro</h3>
               <div className="mt-4 mb-6">
                 <span className="font-heading text-4xl font-bold text-gradient">R$1.870</span>
-                <span className="font-body text-sm text-muted-foreground">/mês</span>
+                <span className="font-body text-sm text-background/60">/mês</span>
               </div>
               <ul className="space-y-3 flex-1">
                 {["1.500 vendas/mês", "100 influenciadores", "Notificações Push", "2 disparos personalizados/mês", "Painel completo"].map((f) => (
-                  <li key={f} className="flex items-start gap-2 font-body text-sm text-muted-foreground">
+                  <li key={f} className="flex items-start gap-2 font-body text-sm text-background/70">
                     <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" /> {f}
                   </li>
                 ))}
@@ -297,19 +297,19 @@ const Index = () => {
             </motion.div>
 
             {/* Elite */}
-            <motion.div variants={fadeUp} className="glass rounded-2xl p-8 flex flex-col">
-              <h3 className="font-heading text-xl font-bold text-foreground text-[#CD9000]">ROI Elite</h3>
+            <motion.div variants={fadeUp} className="rounded-2xl p-8 flex flex-col bg-white/70 backdrop-blur-sm border border-black/5 shadow-sm">
+              <h3 className="font-heading text-xl font-bold text-[#CD9000]">ROI Elite</h3>
               <div className="mt-4 mb-6">
-                <span className="font-heading text-2xl font-bold text-foreground">Sob consulta</span>
+                <span className="font-heading text-2xl font-bold text-background">Sob consulta</span>
               </div>
               <ul className="space-y-3 flex-1">
                 {["Tudo do Pro", "Benefícios exclusivos", "Suporte prioritário", "Personalização completa"].map((f) => (
-                  <li key={f} className="flex items-start gap-2 font-body text-sm text-muted-foreground">
-                    <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" color="#CD9000"/> {f}
+                  <li key={f} className="flex items-start gap-2 font-body text-sm text-background/70">
+                    <CheckCircle2 className="w-4 h-4 text-[#CD9000] mt-0.5 flex-shrink-0"/> {f}
                   </li>
                 ))}
               </ul>
-              <a href="#contato" className="mt-8 block text-center glow-border rounded-lg py-3 font-heading font-medium text-foreground hover:bg-muted transition-colors ">
+              <a href="#contato" className="mt-8 block text-center border border-primary/30 rounded-lg py-3 font-heading font-medium text-background hover:bg-primary/10 transition-colors">
                 Falar com Atendente
               </a>
             </motion.div>
@@ -318,7 +318,7 @@ const Index = () => {
       </section>
 
       {/* Time */}
-      <section className="min-h-screen flex items-center py-24 section-glow">
+      <section className="min-h-screen flex items-center py-32 section-glow">
         <div className="container mx-auto px-6 relative z-10">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="text-center mb-16">
             <motion.span variants={fadeUp} className="font-body text-sm text-primary uppercase tracking-widest">O Time</motion.span>
@@ -348,7 +348,7 @@ const Index = () => {
       </section>
 
       {/* CTA */}
-      <section id="contato" className="min-h-screen flex items-center py-24">
+      <section id="contato" className="min-h-screen flex items-center py-32">
         <div className="container mx-auto px-6">
           <motion.div
             initial="hidden"
