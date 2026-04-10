@@ -191,10 +191,10 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="text-center mb-16">
             <motion.span variants={fadeUp} className="font-body text-sm text-primary uppercase tracking-widest">A Solução</motion.span>
-            <motion.h2 variants={fadeUp} className="font-heading text-4xl md:text-5xl font-bold mt-4">
+            <motion.h2 variants={fadeUp} className="font-heading text-4xl md:text-5xl font-bold mt-4 text-background">
               Nossa entrega muda o jogo
             </motion.h2>
-            <motion.p variants={fadeUp} className="font-body text-lg text-muted-foreground mt-4 max-w-2xl mx-auto">
+            <motion.p variants={fadeUp} className="font-body text-lg text-background/60 mt-4 max-w-2xl mx-auto">
               Uma plataforma capaz de escalar ROI para empresas e influenciadores simultaneamente, criando um ecossistema onde ambos ganham mais.
             </motion.p>
           </motion.div>
@@ -206,12 +206,12 @@ const Index = () => {
               { icon: MessageSquare, title: "Central de Comunicação", desc: "Canal direto entre marca e influenciador para campanhas, briefings e materiais." },
               { icon: TrendingUp, title: "Métricas Detalhadas", desc: "Relatórios completos com foco em ROI, ticket médio, vendas por ação e evolução." },
             ].map((item) => (
-              <motion.div key={item.title} variants={fadeUp} className="glass rounded-2xl p-6 hover:glow-box transition-shadow duration-500 group">
+              <motion.div key={item.title} variants={fadeUp} className="rounded-2xl p-6 bg-white/70 backdrop-blur-sm border border-black/5 shadow-sm hover:shadow-lg transition-shadow duration-500 group">
                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
                   <item.icon className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="font-heading text-lg font-semibold text-foreground mb-2">{item.title}</h3>
-                <p className="font-body text-sm text-muted-foreground">{item.desc}</p>
+                <h3 className="font-heading text-lg font-semibold text-background mb-2">{item.title}</h3>
+                <p className="font-body text-sm text-background/60">{item.desc}</p>
               </motion.div>
             ))}
           </motion.div>
@@ -219,7 +219,7 @@ const Index = () => {
       </section>
 
       {/* Funcionalidades / Escalabilidade */}
-      <section id="funcionalidades" className="min-h-screen flex items-center py-24 section-glow">
+      <section id="funcionalidades" className="min-h-screen flex items-center py-32 section-glow">
         <div className="container mx-auto px-6 relative z-10">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="max-w-4xl mx-auto text-center">
             <motion.span variants={fadeUp} className="font-body text-sm text-primary uppercase tracking-widest">Escalabilidade Real</motion.span>
@@ -251,7 +251,7 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="text-center mb-16">
             <motion.span variants={fadeUp} className="font-body text-sm text-primary uppercase tracking-widest">Planos</motion.span>
-            <motion.h2 variants={fadeUp} className="font-heading text-4xl md:text-5xl font-bold mt-4">
+            <motion.h2 variants={fadeUp} className="font-heading text-4xl md:text-5xl font-bold mt-4 text-background">
               Escolha o plano ideal
             </motion.h2>
           </motion.div>
