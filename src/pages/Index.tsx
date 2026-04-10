@@ -21,6 +21,7 @@ import {
   Smartphone,
 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
+import { Route } from "react-router-dom";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -384,9 +385,12 @@ const Index = () => {
             <span className="font-heading text-sm font-semibold text-foreground">
               RO<span className="text-primary">Influencer</span>
             </span>
+
           </div>
-          <p className="font-body text-xs text-muted-foreground">© 2025 Roinfluencer. All Rights Reserved</p>
+          <a href="/politicas-&-privacidade"><p className="font-body text-xs text-muted-foreground">Politicas de Privacidade</p></a>
+          <p className="font-body text-xs text-muted-foreground">© 2026 ROINFLUENCER SERVIÇOS DIGITAIS LTDA. All Rights Reserved</p>
         </div>
+        
       </footer>
     </div>
   );
