@@ -387,7 +387,7 @@ const Index = () => {
             </span>
 
           </div>
-          <a href="/politicas-&-privacidade"><p className="font-body text-xs text-muted-foreground">Politicas de Privacidade</p></a>
+          <a href="/politicas-%26-privacidade"><p className="font-body text-xs text-muted-foreground">Politicas de Privacidade</p></a>
           <p className="font-body text-xs text-muted-foreground">© 2026 ROINFLUENCER SERVIÇOS DIGITAIS LTDA. All Rights Reserved</p>
         </div>
         
