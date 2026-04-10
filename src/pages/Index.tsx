@@ -133,7 +133,7 @@ const Index = () => {
       </section>
 
       {/* Problema */}
-      <section id="problema" className="min-h-screen flex items-center py-24 section-glow bg-muted/30">
+      <section id="problema" className="min-h-screen flex items-center py-24 section-glow bg-secondary/40">
         <div className="container mx-auto px-6 relative z-10">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="text-center mb-16">
             <motion.span variants={fadeUp} className="font-body text-sm text-primary uppercase tracking-widest">O Problema</motion.span>
@@ -187,7 +187,7 @@ const Index = () => {
       </section>
 
       {/* Solução */}
-      <section id="solucao" className="min-h-screen flex items-center py-24 bg-gray-800">
+      <section id="solucao" className="min-h-screen flex items-center py-24 bg-muted/40">
         <div className="container mx-auto px-6">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="text-center mb-16">
             <motion.span variants={fadeUp} className="font-body text-sm text-primary uppercase tracking-widest">A Solução</motion.span>
@@ -247,7 +247,7 @@ const Index = () => {
       </section>
 
       {/* Planos */}
-      <section id="planos" className="min-h-screen flex items-center py-24 bg-purple-900">
+      <section id="planos" className="min-h-screen flex items-center py-24 bg-secondary/30">
         <div className="container mx-auto px-6">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="text-center mb-16">
             <motion.span variants={fadeUp} className="font-body text-sm text-primary uppercase tracking-widest">Planos</motion.span>
