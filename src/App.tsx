@@ -5,7 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index.tsx";
 import NotFound from "./pages/NotFound.tsx";
-import PoliticaDePrivacidade from "./pages/politicas-&privacidade.tsx";
+import PoliticaDePrivacidade from "./pages/politicas-de-privacidade.tsx";
 
 const queryClient = new QueryClient();
 
@@ -17,7 +17,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="politicas-&-privacidade" element={<PoliticaDePrivacidade />} />
+          <Route path="/politicas-de-privacidade" element={<PoliticaDePrivacidade />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
