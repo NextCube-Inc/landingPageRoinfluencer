@@ -137,7 +137,7 @@ const Index = () => {
         <div className="container mx-auto px-6 relative z-10">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="text-center mb-16">
             <motion.span variants={fadeUp} className="font-body text-sm text-primary uppercase tracking-widest">O Problema</motion.span>
-            <motion.h2 variants={fadeUp} className="font-heading text-4xl md:text-5xl font-bold mt-4">
+            <motion.h2 variants={fadeUp} className="font-heading text-4xl md:text-5xl font-bold mt-4 text-background">
               Dores que travam o crescimento
             </motion.h2>
           </motion.div>
@@ -151,13 +151,13 @@ const Index = () => {
                 { icon: Target, title: "Conversão", desc: "Dificuldade em identificar postagens que convertem mais." },
                 { icon: ShieldCheck, title: "Transparência", desc: "Falta de acesso aos números reais de conversão." },
               ].map((item) => (
-                <motion.div key={item.title} variants={fadeUp} className="flex gap-4 mb-6 glass rounded-xl p-5">
+                <motion.div key={item.title} variants={fadeUp} className="flex gap-4 mb-6 rounded-xl p-5 bg-white/70 backdrop-blur-sm border border-black/5 shadow-sm">
                   <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
                     <item.icon className="w-5 h-5 text-primary" />
                   </div>
                   <div>
-                    <h4 className="font-heading font-semibold text-foreground">{item.title}</h4>
-                    <p className="font-body text-sm text-muted-foreground mt-1">{item.desc}</p>
+                    <h4 className="font-heading font-semibold text-background">{item.title}</h4>
+                    <p className="font-body text-sm text-background/60 mt-1">{item.desc}</p>
                   </div>
                 </motion.div>
               ))}
@@ -171,13 +171,13 @@ const Index = () => {
                 { icon: TrendingUp, title: "Clareza no ROI", desc: "Falta de clareza no ROI por influenciador." },
                 { icon: Zap, title: "Previsibilidade", desc: "Falta de previsibilidade e dificuldade para escalar." },
               ].map((item) => (
-                <motion.div key={item.title} variants={fadeUp} className="flex gap-4 mb-6 glass rounded-xl p-5">
+                <motion.div key={item.title} variants={fadeUp} className="flex gap-4 mb-6 rounded-xl p-5 bg-white/70 backdrop-blur-sm border border-black/5 shadow-sm">
                   <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
                     <item.icon className="w-5 h-5 text-primary" />
                   </div>
                   <div>
-                    <h4 className="font-heading font-semibold text-foreground">{item.title}</h4>
-                    <p className="font-body text-sm text-muted-foreground mt-1">{item.desc}</p>
+                    <h4 className="font-heading font-semibold text-background">{item.title}</h4>
+                    <p className="font-body text-sm text-background/60 mt-1">{item.desc}</p>
                   </div>
                 </motion.div>
               ))}
