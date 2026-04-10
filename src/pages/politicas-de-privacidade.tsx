@@ -1,4 +1,4 @@
-"use client";
+
 
 import { motion } from "framer-motion";
 import logo from "@/assets/V1 (Roxo)@2x.png";
