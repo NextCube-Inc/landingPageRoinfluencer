@@ -318,7 +318,7 @@ const Index = () => {
       </section>
 
       {/* Time */}
-      <section className="min-h-screen flex items-center py-24 section-glow">
+      <section className="min-h-screen flex items-center py-32 section-glow">
         <div className="container mx-auto px-6 relative z-10">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="text-center mb-16">
             <motion.span variants={fadeUp} className="font-body text-sm text-primary uppercase tracking-widest">O Time</motion.span>
@@ -348,7 +348,7 @@ const Index = () => {
       </section>
 
       {/* CTA */}
-      <section id="contato" className="min-h-screen flex items-center py-24">
+      <section id="contato" className="min-h-screen flex items-center py-32">
         <div className="container mx-auto px-6">
           <motion.div
             initial="hidden"
