@@ -83,7 +83,7 @@ const Index = () => {
                     </div>
                   </a>
                   <a
-                    href="#"
+                    href="https://apps.apple.com/br/app/roinfluencer/id6762000187"
                     className="flex items-center gap-3 px-4 py-3 font-body text-sm text-foreground hover:bg-muted/50 transition-colors border-t border-border"
                     onClick={() => setDropdownOpen(false)}
                   >
